@@ -1,0 +1,10 @@
+- Account: testcluster-158807
+  MasterIP: ""
+  Name: master-test
+  Provider: google
+  Src: master-test.yaml
+- Account: lucid-timing-151005
+  MasterIP: ""
+  Name: lstest3
+  Provider: google
+  Src: lstest3.yaml
