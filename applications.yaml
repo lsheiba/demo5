@@ -21,7 +21,7 @@
   name: kl-demo-2
 - charts:
   - clusters:
-    - master-test
+    - demo-cluster-1
     configuration: {}
     name: wordpress
     src: https://dev.kuberlab.io/kuberlab/wordpress
