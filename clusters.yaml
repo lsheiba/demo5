@@ -8,7 +8,7 @@
   Name: demo-cluster-2
   Provider: google
   Src: demo-cluster-2.yaml
-  - Account: kl-demo-2
+- Account: kl-demo-2
   MasterIP: ""
   Name: demo-cluster-3
   Provider: google
