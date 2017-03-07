@@ -1,4 +1,4 @@
-name: kl-demo-2
+- name: kl-demo-2
   charts:
     - name: demo-web-server
       src: https://github.com/kuberlab/demo-web-server/Chart
