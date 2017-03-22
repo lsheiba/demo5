@@ -1,9 +1,9 @@
-- Account: kl-demo-4
+- Account: kl-demo-3
   MasterIP: ""
   Name: demo-cluster-1
   Provider: google
   Src: demo-cluster-1.yaml
-- Account: kl-demo-4
+- Account: kl-demo-3
   MasterIP: ""
   Name: demo-cluster-2
   Provider: google
