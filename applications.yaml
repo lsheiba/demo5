@@ -1,1 +1,34 @@
-
+- charts:
+  - clusters:
+    - demo-cluster-1
+    configuration:
+      values:
+        image: bitnami/wordpress:4.7-r0
+        imagePullPolicy: IfNotPresent
+        mariadb:
+          persistence:
+            accessMode: ReadWriteOnce
+            enabled: true
+            size: 8Gi
+        persistence:
+          apache:
+            accessMode: ReadWriteOnce
+            size: 1Gi
+          enabled: true
+          wordpress:
+            accessMode: ReadWriteOnce
+            size: 8Gi
+        resources:
+          requests:
+            cpu: 300m
+            memory: 512Mi
+        serviceType: LoadBalancer
+        wordpressBlogName: User's Blog!
+        wordpressEmail: user@example.com
+        wordpressFirstName: FirstName
+        wordpressLastName: LastName
+        wordpressUsername: user
+    name: wordpress
+    src: https://github.com/kuberlab/wordpress-chart/
+    version: 0.4.0
+  name: wp1
