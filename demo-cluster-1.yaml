@@ -1,5 +1,5 @@
 name: "demo-cluster-1"
-zone: us-central1-a
+zone: us-west1-a
 instances:
   - name: front
     count: 1
