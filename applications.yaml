@@ -4,13 +4,13 @@
     configuration:
       values:
         cpu:
-          limits: 100m
+          limits: 1000m
           requests: 25m
         image:
           Name: lsheiba/tensorflow-ls-devel
           Tag: latest
         memory:
-          limits: 2048Mi
+          limits: 8192Mi
           requests: 64Mi
         replicas: 1
         serviceType: ClusterIP
