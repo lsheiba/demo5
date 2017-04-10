@@ -1,6 +1,4 @@
 - charts: []
-  name: tf-vebon
-- charts: []
   name: tfj-v3
 - charts:
   - clusters:
