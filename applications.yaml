@@ -1,22 +1,4 @@
 - charts: []
   name: tfj-v3
-- charts:
-  - clusters:
-    - minikube-ls
-    configuration:
-      values:
-        cpu:
-          limits: 8000m
-          requests: 25m
-        image:
-          Name: lsheiba/tensorflow-ls-devel
-          Tag: latest
-        memory:
-          limits: 16Gi
-          requests: 64Mi
-        replicas: 1
-        serviceType: ClusterIP
-    name: tfj-v3
-    src: https://github.com/lsheiba/tfj-v3/
-    version: 1.0.0
+- charts: []
   name: tf-vb
