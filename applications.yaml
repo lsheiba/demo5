@@ -6,18 +6,14 @@
     configuration:
       values:
         cpu:
-          limits: 1000m
+          limits: 8000m
           requests: 25m
         image:
           Name: lsheiba/tensorflow-ls-devel
           Tag: latest
         memory:
-          limits: 8048Mi
+          limits: 16Gi
           requests: 64Mi
-        persistence:
-          accessMode: ReadWriteOnce
-          enabled: true
-          size: 2Gi
         replicas: 1
         serviceType: ClusterIP
     name: tfj-v3
