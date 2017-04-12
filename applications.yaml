@@ -24,3 +24,83 @@
     src: https://github.com/lsheiba/tfj-v3/
     version: 1.0.0
   name: tf-fb
+- charts:
+  - clusters:
+    - minikube-ls
+    configuration:
+      values:
+        accessKey: AKIAIOSFODNN7EXAMPLE
+        configPath: ""
+        image: minio/minio
+        imagePullPolicy: Always
+        imageTag: RELEASE.2017-03-16T21-50-32Z
+        minioConfig:
+          aqmp:
+            autoDeleted: false
+            durable: false
+            enable: false
+            exchange: ""
+            exchangeType: ""
+            immediate: false
+            internal: false
+            mandatory: false
+            noWait: false
+            routingKey: ""
+            url: ""
+          elasticsearch:
+            enable: false
+            index: ""
+            url: ""
+          kafka:
+            brokers: "null"
+            enable: false
+            topic: ""
+          nats:
+            address: ""
+            async: false
+            clientID: ""
+            clusterID: ""
+            enable: false
+            enableStreaming: false
+            maxPubAcksInflight: 0
+            password: ""
+            pingInterval: 0
+            secure: false
+            subject: ""
+            token: ""
+            username: ""
+          postgresql:
+            connectionString: ""
+            database: ""
+            enable: false
+            host: ""
+            password: ""
+            port: ""
+            table: ""
+            user: ""
+          redis:
+            address: ""
+            enable: false
+            key: ""
+            password: ""
+          webhook:
+            enable: false
+            endpoint: ""
+        mode: standalone
+        mountPath: /export
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: true
+          size: 10Gi
+        replicas: 4
+        resources:
+          requests:
+            cpu: 250m
+            memory: 256Mi
+        secretKey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+        servicePort: 9000
+        serviceType: LoadBalancer
+    name: minio
+    src: https://github.com/kuberlab-catalog/minio/
+    version: 0.1.0
+  name: minio
