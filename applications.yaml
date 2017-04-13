@@ -8,3 +8,27 @@
   name: tensor
 - charts: []
   name: fns
+- charts:
+  - clusters:
+    - minikube-ls
+    configuration:
+      values:
+        cpu:
+          limits: 100m
+          requests: 25m
+        image:
+          Name: lsheiba/fast-neural-style
+          Tag: latest
+        memory:
+          limits: 2048Mi
+          requests: 64Mi
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: true
+          size: 1Gi
+        replicas: 1
+        serviceType: ClusterIP
+    name: fast-neural-style
+    src: https://github.com/lsheiba/fast-neural-style/
+    version: 1.0.0
+  name: fast
