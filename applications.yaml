@@ -1,16 +1,1 @@
-- charts: []
-  name: tf-vb
-- charts: []
-  name: tf-fb
-- charts: []
-  name: minio
-- charts: []
-  name: tensor
-- charts: []
-  name: fns
-- charts: []
-  name: fast
-- charts: []
-  name: fsj
-- charts: []
-  name: tfj
+
