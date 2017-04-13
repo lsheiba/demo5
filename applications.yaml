@@ -10,27 +10,5 @@
   name: fns
 - charts: []
   name: fast
-- charts:
-  - clusters:
-    - minikube-ls
-    configuration:
-      values:
-        cpu:
-          limits: 1000m
-          requests: 25m
-        image:
-          Name: lsheiba/tensorflow-ls-devel
-          Tag: latest
-        memory:
-          limits: 20048Mi
-          requests: 64Mi
-        persistence:
-          accessMode: ReadWriteOnce
-          enabled: true
-          size: 1Gi
-        replicas: 1
-        serviceType: ClusterIP
-    name: tfj-v3
-    src: https://github.com/lsheiba/tfj-v3/
-    version: 1.0.0
+- charts: []
   name: fsj
