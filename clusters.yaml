@@ -1,4 +1,4 @@
-- Account: kuberlab-test
+- Account: keberlab-test
   MasterIP: ""
   Name: demo-cluster-1
   Provider: google
