@@ -18,3 +18,8 @@
   Name: minikube-ls
   Provider: kubernetes
   Src: minikube-ls.yaml
+- Account: minikube-ls
+  MasterIP: ""
+  Name: minikube
+  Provider: kubernetes
+  Src: minikube.yaml
