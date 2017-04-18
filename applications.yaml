@@ -1,1 +1,28 @@
-null
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        cpu:
+          limits: 8000m
+          requests: 100m
+        image:
+          Name: lsheiba/fast-neural-style
+          Tag: latest
+        memory:
+          limits: 16Gi
+          requests: 64Mi
+        persistence:
+          accessMode: ReadWriteMany
+          enabled: true
+          nfs:
+            path: /kuberlab
+            server: 192.168.1.55
+          size: 16Gi
+          storageClass: standard
+        replicas: 1
+        serviceType: ClusterIP
+    name: fast-neural-style
+    src: https://github.com/lsheiba/fast-neural-style/
+    version: 1.0.0
+  name: fast
