@@ -1,18 +1,3 @@
-- Account: keberlab-test
-  MasterIP: ""
-  Name: demo-cluster-1
-  Provider: google
-  Src: demo-cluster-1.yaml
-- Account: kl-demo3
-  MasterIP: ""
-  Name: demo-cluster-2
-  Provider: google
-  Src: demo-cluster-2.yaml
-- Account: kl-demo2
-  MasterIP: ""
-  Name: demo-cluster-3
-  Provider: google
-  Src: demo-cluster-3.yaml
 - Account: minikube
   MasterIP: ""
   Name: minikube
