@@ -13,8 +13,3 @@
   Name: demo-cluster-3
   Provider: google
   Src: demo-cluster-3.yaml
-- Account: minikube-ls
-  MasterIP: ""
-  Name: minikube
-  Provider: kubernetes
-  Src: minikube.yaml
