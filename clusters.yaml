@@ -1,4 +1,4 @@
-- Account: minikube
+- Account: gpuhome
   MasterIP: ""
   Name: minikube
   Provider: kubernetes
