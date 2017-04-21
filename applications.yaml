@@ -26,3 +26,11 @@
     src: https://github.com/lsheiba/fast-neural-style/
     version: 1.0.0
   name: fast
+- charts:
+  - clusters:
+    - minikube
+    configuration: {}
+    name: nfs-server
+    src: https://github.com/lsheiba/nfs-server-chart/chart
+    version: 0.0.1
+  name: nfsd
