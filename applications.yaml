@@ -1,8 +1,1 @@
-- charts:
-  - clusters:
-    - minikube
-    configuration: {}
-    name: nfs-server
-    src: https://github.com/lsheiba/nfs-server-chart/chart
-    version: 0.0.1
-  name: nfsd
+[]
