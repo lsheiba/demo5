@@ -78,3 +78,11 @@
     src: https://github.com/lsheiba/tensorflow-jupyter-gpu/
     version: 1.0.0
   name: tfjgpu
+- charts:
+  - clusters:
+    - minikube
+    configuration: {}
+    name: kubernetes-dashboard
+    src: https://github.com/kuberlab-catalog/kubernetes-dashboard/
+    version: 1.0.0
+  name: kadm
