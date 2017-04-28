@@ -22,7 +22,7 @@
           storageClass: anything
     name: grafana-prometheus
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
-    version: 1.0.2
+    version: 1.0.3
   name: graphana
 - charts:
   - clusters:
