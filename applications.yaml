@@ -63,3 +63,13 @@
     src: https://github.com/kuberlab-catalog/kubernetes-dashboard/
     version: 1.0.0
   name: kadm
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        serviceType: ClusterIP
+    name: kubernetes-dashboard
+    src: https://github.com/kuberlab-catalog/kubernetes-dashboard/
+    version: 1.0.0
+  name: kubeadm
