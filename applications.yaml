@@ -13,22 +13,6 @@
     - minikube
     configuration:
       values:
-        persistence:
-          accessMode: ReadWriteOnce
-          enabled: false
-          size:
-            grafana: 1Gi
-            prometheus: 10Gi
-          storageClass: anything
-    name: grafana-prometheus
-    src: https://github.com/kuberlab-catalog/grafana-prometheus/
-    version: 1.0.3
-  name: graphana
-- charts:
-  - clusters:
-    - minikube
-    configuration:
-      values:
         cpu:
           limits: 8000m
           requests: 100m
