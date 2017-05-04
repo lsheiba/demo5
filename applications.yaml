@@ -8,3 +8,31 @@
     src: https://github.com/kuberlab-catalog/kubernetes-dashboard/
     version: 1.0.0
   name: dashboard
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        cpu:
+          limits: 8000m
+          requests: 100m
+        image:
+          Name: lsheiba/tf-jupyter-devel-gpu
+          Tag: latest
+        memory:
+          limits: 16Gi
+          requests: 4Gi
+        persistence:
+          accessMode: ReadWriteMany
+          enabled: true
+          nfs:
+            path: /kuberlab/mnist
+            server: 192.168.1.55
+          size: 16Gi
+          storageClass: standard
+        replicas: 1
+        serviceType: ClusterIP
+    name: tensorflow-jupyter-gpu-1
+    src: https://github.com/lsheiba/tensorflow-jupyter-gpu/
+    version: 1.0.0
+  name: tfgpu
