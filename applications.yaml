@@ -49,3 +49,19 @@
     src: https://github.com/kuberlab-catalog/codiad/
     version: 1.0.0
   name: code
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: false
+          size:
+            grafana: 1Gi
+            prometheus: 10Gi
+          storageClass: anything
+    name: grafana-prometheus
+    src: https://github.com/kuberlab-catalog/grafana-prometheus/
+    version: 1.0.3
+  name: grafana
