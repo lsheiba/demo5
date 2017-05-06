@@ -56,7 +56,7 @@
           accessMode: ReadWriteMany
           enabled: true
           nfs:
-            path: /kuberlab/mnist
+            path: /kuberlab
             server: 192.168.1.55
           size: 16Gi
           storageClass: standard
