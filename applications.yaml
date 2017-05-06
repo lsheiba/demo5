@@ -71,3 +71,27 @@
     src: https://github.com/lsheiba/tensorboard/
     version: 1.0.0
   name: tb1
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        image: wernight/codiad:alpine
+        persistence:
+          accessMode: ReadWriteMany
+          enabled: true
+          nfs:
+            codiadPath: codiad
+            path: /kuberlab
+            server: 192.168.1.55
+          size: 16Gi
+          storageClass: standard
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+        serviceType: ClusterIP
+    name: codiad
+    src: https://github.com/kuberlab-catalog/codiad/
+    version: 1.0.1
+  name: code
