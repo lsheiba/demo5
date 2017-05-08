@@ -93,3 +93,53 @@
     src: https://github.com/lsheiba/tensorboard/
     version: 1.0.0
   name: tb1
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        jupyter:
+          cpu:
+            limits: 8000m
+            requests: 100m
+          image:
+            Name: lsheiba/tensorflow-ls-devel
+            Tag: latest
+          memory:
+            limits: 16Gi
+            requests: 64Mi
+          serviceType: ClusterIP
+        mlboard:
+          cpu:
+            limits: 1000m
+            requests: 100m
+          image:
+            Name: kuberlab/mlboard
+            Tag: latest
+          memory:
+            limits: 2Gi
+            requests: 64Mi
+          serviceType: ClusterIP
+        tensorboard:
+          cpu:
+            limits: 1000m
+            requests: 100m
+          image:
+            Name: lsheiba/tensorboard
+            Tag: latest
+          memory:
+            limits: 2Gi
+            requests: 64Mi
+          serviceType: ClusterIP
+        volumes:
+          data:
+            nfs:
+              path: /kuberlab
+              server: 192.168.1.55
+            size: 16Gi
+            storageClass: standard
+        workspace: lsspace
+    name: mlboard
+    src: https://github.com/kuberlab-catalog/ml-board/
+    version: 1.0.0
+  name: lsspace
