@@ -109,7 +109,7 @@
               server: 192.168.1.55
             size: 16Gi
             storageClass: standard
-        workspace: lstest
+        workspace: testgpu
     name: mlgpuboard
     src: https://github.com/lsheiba/ml-gpu-board/
     version: 1.0.0
