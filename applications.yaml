@@ -47,3 +47,21 @@
     src: https://github.com/kuberlab-catalog/ml-board/
     version: 1.0.0
   name: lmb
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: false
+          size:
+            grafana: 1Gi
+            prometheus: 10Gi
+          storageClass: anything
+        pushGateway:
+          enabled: true
+    name: grafana-prometheus
+    src: https://github.com/kuberlab-catalog/grafana-prometheus/
+    version: 1.1.0
+  name: grafana-prometheus
