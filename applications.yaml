@@ -41,7 +41,7 @@
           memory:
             limits: 4Gi
             requests: 64Mi
-          replicas: 1
+          replicas: 2
         fluentd:
           cpu:
             limits: 1000m
