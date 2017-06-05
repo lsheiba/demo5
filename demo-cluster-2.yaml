@@ -1,4 +1,5 @@
 name: "demo-cluster-2"
+kubernetes_version: v1.6.2
 zone: us-east1-b
 instances:
   - name: front
