@@ -44,3 +44,31 @@
     src: https://github.com/lsheiba/fast-neural-style-gpu/
     version: 1.0.0
   name: fastgpu
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        cpu:
+          limits: 8000m
+          requests: 100m
+        image:
+          Name: lsheiba/tfcaption-p3-gpu
+          Tag: latest
+        memory:
+          limits: 16Gi
+          requests: 4Gi
+        persistence:
+          accessMode: ReadWriteMany
+          enabled: true
+          nfs:
+            path: /kuberlab/kuberlab-demo/caption
+            server: 192.168.1.55
+          size: 16Gi
+          storageClass: standard
+        replicas: 1
+        serviceType: ClusterIP
+    name: tensorflow-python3-gpu
+    src: https://github.com/lsheiba/tensorflow-python3-gpu/
+    version: 1.0.0
+  name: tfp3gpu
