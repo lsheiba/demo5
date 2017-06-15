@@ -72,3 +72,18 @@
     src: https://github.com/lsheiba/tensorflow-jupyter-gpu/
     version: 1.0.0
   name: tfgpu
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        image: kuberlab/painter:latest
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+        serviceType: ClusterIP
+    name: painter
+    src: https://github.com/kuberlab-catalog/painter/
+    version: 1.0.0
+  name: painter
