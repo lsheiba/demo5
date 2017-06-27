@@ -16,3 +16,19 @@
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
     version: 1.3.0
   name: kuberlab
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        image: kuberlab/painter:latest
+        model: mnist-sm-build-27
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        serviceType: ClusterIP
+    name: painter
+    src: https://github.com/kuberlab-catalog/painter/
+    version: 1.0.0
+  name: painter
