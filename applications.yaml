@@ -22,6 +22,7 @@
     configuration:
       values:
         image: kuberlab/painter:latest
+        mlapp: mnist-sm
         model: mnist-sm-build-27
         resources:
           requests:
