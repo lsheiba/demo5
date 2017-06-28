@@ -35,3 +35,20 @@
     src: https://github.com/kuberlab-catalog/painter/
     version: 1.0.0
   name: painter
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        image: kuberlab/styles-transfer-ui:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        serviceType: ClusterIP
+        styles_mlapp: styles-transfer
+        styles_model: styles-transfer-build-35
+    name: styles-transfer-ui
+    src: https://github.com/kuberlab-catalog/styles-transfer-ui/
+    version: 1.0.0
+  name: sui
