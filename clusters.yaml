@@ -1,5 +1,5 @@
 - Account: gpuhome
-  AutoDeploy: true
+  AutoDeploy: false
   Name: minikube
   Provider: kubernetes
   Src: minikube.yaml
