@@ -12,6 +12,7 @@
           storageClass: anything
         pushGateway:
           enabled: true
+          exportGPU: true
     name: grafana-prometheus
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
     version: ^1.0.0
