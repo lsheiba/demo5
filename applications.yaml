@@ -31,7 +31,7 @@
             memory: 64Mi
         serviceType: ClusterIP
         styles_mlapp: styles-transfer
-        styles_model: styles-transfer-build-35
+        styles_model: styles-transfer-build-38
     name: painter
     src: https://github.com/kuberlab-catalog/painter/
     version: 1.0.0
@@ -48,7 +48,7 @@
             memory: 64Mi
         serviceType: ClusterIP
         styles_mlapp: styles-transfer
-        styles_model: styles-transfer-build-35
+        styles_model: styles-transfer-build-38
     name: styles-transfer-ui
     src: https://github.com/kuberlab-catalog/styles-transfer-ui/
     version: 1.0.0
