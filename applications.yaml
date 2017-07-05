@@ -59,8 +59,8 @@
     configuration:
       values:
         image: kuberlab/mnist-ui:latest
-        mnist_mlapp: mnist-sm
-        mnist_model: mnist-sm-build-27
+        mnist_mlapp: mnist-deep
+        mnist_model: mnist-deep-build-1
         resources:
           requests:
             cpu: 100m
