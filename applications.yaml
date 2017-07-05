@@ -3,6 +3,7 @@
     - minikube
     configuration:
       values:
+        exportGPU: true
         persistence:
           accessMode: ReadWriteOnce
           enabled: false
@@ -12,7 +13,6 @@
           storageClass: anything
         pushGateway:
           enabled: true
-          exportGPU: true
     name: grafana-prometheus
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
     version: ^1.0.0
