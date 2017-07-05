@@ -60,7 +60,7 @@
       values:
         image: kuberlab/mnist-ui:latest
         mnist_mlapp: mnist-deep
-        mnist_model: mnist-deep-build-1
+        mnist_model: mnist-deep-build-2
         resources:
           requests:
             cpu: 100m
