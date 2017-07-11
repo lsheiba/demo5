@@ -1,13 +1,7 @@
-- name: kuberlab
-  charts:
-  - name: grafana-prometheus
-    clusters:
+- charts:
+  - clusters:
     - minikube
-    src: https://github.com/kuberlab-catalog/grafana-prometheus/
-    version: ^1.0.0
-    protocol: ""
     configuration:
-      file: ""
       values:
         exportGPU: true
         persistence:
@@ -19,18 +13,14 @@
           storageClass: anything
         pushGateway:
           enabled: true
-    order: null
-  global: {}
-- name: painter
-  charts:
-  - name: painter
-    clusters:
+    name: grafana-prometheus
+    src: https://github.com/kuberlab-catalog/grafana-prometheus/
+    version: ^1.0.0
+  name: kuberlab
+- charts:
+  - clusters:
     - minikube
-    src: https://github.com/kuberlab-catalog/painter/
-    version: 1.0.0
-    protocol: ""
     configuration:
-      file: ""
       values:
         image: kuberlab/painter:latest
         mnist_mlapp: mnist-sm
@@ -42,18 +32,14 @@
         serviceType: ClusterIP
         styles_mlapp: styles-transfer
         styles_model: styles-transfer-build-38
-    order: null
-  global: {}
-- name: sui
-  charts:
-  - name: styles-transfer-ui
-    clusters:
-    - minikube
-    src: https://github.com/kuberlab-catalog/styles-transfer-ui/
+    name: painter
+    src: https://github.com/kuberlab-catalog/painter/
     version: 1.0.0
-    protocol: ""
+  name: painter
+- charts:
+  - clusters:
+    - minikube
     configuration:
-      file: ""
       values:
         image: kuberlab/styles-transfer-ui:latest
         resources:
@@ -63,18 +49,14 @@
         serviceType: ClusterIP
         styles_mlapp: styles-transfer
         styles_model: styles-transfer-build-38
-    order: null
-  global: {}
-- name: mnist-ui
-  charts:
-  - name: mnist-ui
-    clusters:
-    - minikube
-    src: https://github.com/kuberlab-catalog/mnist-ui/
+    name: styles-transfer-ui
+    src: https://github.com/kuberlab-catalog/styles-transfer-ui/
     version: 1.0.0
-    protocol: ""
+  name: sui
+- charts:
+  - clusters:
+    - minikube
     configuration:
-      file: ""
       values:
         image: kuberlab/mnist-ui:latest
         mnist_mlapp: mnist-deep
@@ -84,5 +66,26 @@
             cpu: 100m
             memory: 64Mi
         serviceType: ClusterIP
-    order: null
-  global: {}
+    name: mnist-ui
+    src: https://github.com/kuberlab-catalog/mnist-ui/
+    version: 1.0.0
+  name: mnist-ui
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        imagePullPolicy: IfNotPresent
+        imageTag: 5.7.14
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: true
+          size: 8Gi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+    name: mysql
+    src: https://github.com/kuberlab-catalog/mysql/
+    version: 0.2.5
+  name: mysql
