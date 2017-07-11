@@ -70,22 +70,3 @@
     src: https://github.com/kuberlab-catalog/mnist-ui/
     version: 1.0.0
   name: mnist-ui
-- charts:
-  - clusters:
-    - minikube
-    configuration:
-      values:
-        imagePullPolicy: IfNotPresent
-        imageTag: 5.7.14
-        persistence:
-          accessMode: ReadWriteOnce
-          enabled: true
-          size: 8Gi
-        resources:
-          requests:
-            cpu: 100m
-            memory: 256Mi
-    name: mysql
-    src: https://github.com/kuberlab-catalog/mysql/
-    version: 0.2.5
-  name: mysql
