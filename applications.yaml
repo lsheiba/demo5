@@ -86,3 +86,26 @@
         serviceType: ClusterIP
     order: null
   global: {}
+- name: mysql
+  charts:
+  - name: mysql
+    clusters:
+    - minikube
+    src: https://github.com/kuberlab-catalog/mysql/
+    version: 0.2.5
+    protocol: ""
+    configuration:
+      file: ""
+      values:
+        imagePullPolicy: IfNotPresent
+        imageTag: 5.7.14
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: true
+          size: 8Gi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+    order: null
+  global: {}
