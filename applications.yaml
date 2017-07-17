@@ -70,3 +70,22 @@
     src: https://github.com/kuberlab-catalog/mnist-ui/
     version: 1.0.0
   name: mnist-ui
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        exportGPU: false
+        persistence:
+          accessMode: ReadWriteOnce
+          enabled: true
+          size:
+            grafana: 1Gi
+            prometheus: 10Gi
+          storageClass: anything
+        pushGateway:
+          enabled: true
+    name: grafana-prometheus
+    src: https://github.com/kuberlab-catalog/grafana-prometheus/
+    version: 1.7.6
+  name: graphana
