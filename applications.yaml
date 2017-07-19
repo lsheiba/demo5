@@ -4,6 +4,7 @@
     configuration:
       values:
         exportGPU: true
+        RBAC: true
         persistence:
           accessMode: ReadWriteOnce
           enabled: false
