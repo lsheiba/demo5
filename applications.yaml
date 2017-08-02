@@ -81,3 +81,92 @@
     src: https://github.com/kuberlab-catalog/styles-transfer-v2/
     version: 1.0.0
   name: styles-v2
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        controller:
+          config: {}
+          defaultBackendService: ""
+          extraArgs: {}
+          image:
+            pullPolicy: IfNotPresent
+            repository: gcr.io/google_containers/nginx-ingress-controller
+            tag: 0.8.3
+          kind: Deployment
+          name: controller
+          nodeSelector: {}
+          podAnnotations: {}
+          replicaCount: 1
+          resources: {}
+          scope:
+            enabled: false
+            namespace: ""
+          service:
+            annotations: {}
+            clusterIP: ""
+            externalIPs: []
+            loadBalancerIP: ""
+            loadBalancerSourceRanges: []
+            nodePorts:
+              http: ""
+              https: ""
+            type: ClusterIP
+          stats:
+            enabled: false
+            service:
+              annotations: {}
+              clusterIP: ""
+              externalIPs: []
+              loadBalancerIP: ""
+              loadBalancerSourceRanges: []
+              servicePort: 18080
+              type: ClusterIP
+        defaultBackend:
+          enabled: true
+          extraArgs: {}
+          image:
+            pullPolicy: IfNotPresent
+            repository: gcr.io/google_containers/defaultbackend
+            tag: "1.2"
+          name: default-backend
+          nodeSelector: {}
+          podAnnotations: {}
+          replicaCount: 1
+          resources: {}
+          service:
+            annotations: {}
+            clusterIP: ""
+            externalIPs: []
+            loadBalancerIP: ""
+            loadBalancerSourceRanges: []
+            servicePort: 80
+            type: ClusterIP
+        statsExporter:
+          endpoint: /metrics
+          extraArgs: {}
+          image:
+            pullPolicy: IfNotPresent
+            repository: quay.io/cy-play/vts-nginx-exporter
+            tag: v0.0.3
+          metricsNamespace: nginx
+          name: stats-exporter
+          resources: {}
+          service:
+            annotations: {}
+            clusterIP: ""
+            externalIPs: []
+            loadBalancerIP: ""
+            loadBalancerSourceRanges: []
+            servicePort: 9913
+            type: ClusterIP
+          statusPage: http://localhost:18080/nginx_status/format/json
+        tcp:
+          "5000": gan-demo/serving-gan-2:5000
+        udp: {}
+        useRBAC: true
+    name: nginx-ingress
+    src: https://github.com/kuberlab-catalog/nginx-ingress/
+    version: 0.3.2
+  name: nginx-ingress
