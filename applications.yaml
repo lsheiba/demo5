@@ -101,7 +101,7 @@
           replicaCount: 1
           resources: {}
           scope:
-            enabled: false
+            enabled: true
             namespace: "nginx-ingress"
           service:
             annotations: {}
