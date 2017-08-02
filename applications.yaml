@@ -23,25 +23,6 @@
     - minikube
     configuration:
       values:
-        image: kuberlab/painter:latest
-        mnist_mlapp: mnist-sm
-        mnist_model: mnist-sm-build-27
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-        serviceType: ClusterIP
-        styles_mlapp: styles-transfer
-        styles_model: styles-transfer-build-55
-    name: painter
-    src: https://github.com/kuberlab-catalog/painter/
-    version: 1.0.0
-  name: painter
-- charts:
-  - clusters:
-    - minikube
-    configuration:
-      values:
         image: kuberlab/styles-transfer-ui:latest
         resources:
           requests:
