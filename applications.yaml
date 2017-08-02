@@ -59,23 +59,6 @@
     - minikube
     configuration:
       values:
-        image: kuberlab/mnist-ui:latest
-        mnist_mlapp: mnist-deep
-        mnist_model: mnist-deep-build-2
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-        serviceType: ClusterIP
-    name: mnist-ui
-    src: https://github.com/kuberlab-catalog/mnist-ui/
-    version: 1.0.0
-  name: mnist-ui
-- charts:
-  - clusters:
-    - minikube
-    configuration:
-      values:
         storage: qnap
     name: styles-transf-1
     src: https://github.com/kuberlab-catalog/styles-transfer-v2/
@@ -102,7 +85,7 @@
           resources: {}
           scope:
             enabled: true
-            namespace: "nginx-ingress"
+            namespace: nginx-ingress
           service:
             annotations: {}
             clusterIP: ""
