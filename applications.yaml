@@ -18,3 +18,20 @@
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
     version: ^1.0.0
   name: kuberlab
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        image: kuberlab/styles-transfer-ui:latest
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+        serviceType: ClusterIP
+        styles_mlapp: styles-set
+        styles_model: serving-train-14
+    name: styles-transfer-ui
+    src: https://github.com/kuberlab-catalog/styles-transfer-ui/
+    version: 1.0.0
+  name: styles-demo
