@@ -3,3 +3,8 @@
   Name: minikube
   Provider: kubernetes
   Src: minikube.yaml
+- Account: garage
+  AutoDeploy: false
+  Name: garage
+  Provider: kubernetes
+  Src: garage.yaml
