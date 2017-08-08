@@ -1,1 +1,5 @@
-[]
+- Account: gpuhome
+  AutoDeploy: false
+  Name: garage
+  Provider: kubernetes
+  Src: garage.yaml
