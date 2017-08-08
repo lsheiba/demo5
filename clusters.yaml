@@ -1,5 +1,1 @@
-- Account: garage
-  AutoDeploy: false
-  Name: garage
-  Provider: kubernetes
-  Src: garage.yaml
+[]
