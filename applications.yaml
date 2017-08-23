@@ -40,7 +40,7 @@
     - minikube
     configuration:
       values:
-        app: 21-zappos-set
+        app: "21-zappos-set"
         model: serving-standalone-2
         port: 5000
     name: zappos-ui
