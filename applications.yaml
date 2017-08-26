@@ -40,10 +40,51 @@
     - minikube
     configuration:
       values:
-        app: "21-zappos-set"
+        app: 21-zappos-set
         model: serving-standalone-2
         port: 5000
     name: zappos-ui
     src: https://github.com/kuberlab-catalog/zappos-ui/
     version: 1.0.0
   name: zappos-ui
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        airflow:
+          base_url: http://localhost:8080
+          dag_concurrency: 16
+          dbPollSize: 5
+          fernet_key: test
+          max_active_runs_per_dag: 16
+          secret_key: test
+          service_type: ClusterIP
+          smtp:
+            host: localhost
+            mail_from: airflow@airflow.local
+            password: null
+            port: 25
+            ssl: false
+            starttls: true
+            user: airflow
+        ingress:
+          airflow-url: airflow.cluster.local
+          annotations: null
+          enabled: false
+          flower-url: flower.cluster.local
+          tls: null
+        postgresql:
+          postgresDatabase: airflow
+          postgresPassword: airflow
+          postgresUser: airflow
+        rabbitmq:
+          rabbitmqPassword: airflow
+          rabbitmqUsername: airflow
+          rabbitmqVhost: airflow
+        tls_seret:
+          enabled: false
+    name: airflow
+    src: https://github.com/dreyk/kube-airflow/chart
+    version: 0.1.1
+  name: airflow
