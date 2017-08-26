@@ -69,10 +69,10 @@
             starttls: true
             user: airflow
         ingress:
-          airflow-url: airflow.cluster.local
+          airflow_url: airflow.cluster.local
           annotations: null
           enabled: false
-          flower-url: flower.cluster.local
+          flower_url: flower.cluster.local
           tls: null
         postgresql:
           postgresDatabase: airflow
