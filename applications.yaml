@@ -55,7 +55,7 @@
         airflow:
           worker:
             replicas: 1
-          image: kuberlab/kube-airflow:1.8.0.0-1.6.6-0.1.3
+          image: kuberlab/kube-airflow:1.8.0.0-1.6.6-0.1.4
           base_url: http://localhost:8080
           dag_concurrency: 16
           dbPollSize: 5
