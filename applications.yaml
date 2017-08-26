@@ -81,10 +81,18 @@
           postgresDatabase: airflow
           postgresPassword: airflow
           postgresUser: airflow
+          persistence:
+            enabled: false
+            accessMode: ReadWriteOnce
+            size: 8Gi
         rabbitmq:
           rabbitmqPassword: airflow
           rabbitmqUsername: airflow
           rabbitmqVhost: airflow
+          persistence:
+            enabled: false
+            accessMode: ReadWriteOnce
+            size: 8Gi
         tls_seret:
           enabled: false
     name: airflow
