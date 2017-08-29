@@ -47,3 +47,56 @@
     src: https://github.com/kuberlab-catalog/zappos-ui/
     version: 1.0.0
   name: zappos-ui
+- charts:
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        airflow:
+          base_url: http://localhost:8080
+          dag_concurrency: 16
+          dbPollSize: 5
+          fernet_key: 12
+          image: kuberlab/kube-airflow:1.8.0.0-1.6.6-0.1.5
+          max_active_runs_per_dag: 16
+          secret_key: my_key
+          service_type: ClusterIP
+          smtp:
+            host: localhost
+            mail_from: airflow@airflow.local
+            password: null
+            port: 25
+            ssl: false
+            starttls: true
+            user: airflow
+          worker:
+            replicas: 1
+        ingress:
+          airflow_url: airflow.cluster.local
+          annotations: null
+          enabled: false
+          flower_url: flower.cluster.local
+          tls: null
+        postgresql:
+          persistence:
+            accessMode: ReadWriteOnce
+            enabled: false
+            size: 8Gi
+            subPath: postgresql-db
+          postgresDatabase: airflow
+          postgresPassword: airflow
+          postgresUser: airflow
+        rabbitmq:
+          persistence:
+            accessMode: ReadWriteOnce
+            enabled: false
+            size: 8Gi
+          rabbitmqPassword: airflow
+          rabbitmqUsername: airflow
+          rabbitmqVhost: airflow
+        tls_seret:
+          enabled: false
+    name: airflow
+    src: https://github.com/dreyk/kube-airflow/chart
+    version: 0.1.1
+  name: airflow
