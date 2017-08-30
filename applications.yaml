@@ -62,6 +62,12 @@
           max_active_runs_per_dag: 16
           secret_key: my_key
           service_type: ClusterIP
+          dags:
+            subpath: "dags"
+            dag_share:
+             nfs:
+              path: /kuberlab
+              server: 192.168.1.55
           smtp:
             host: localhost
             mail_from: airflow@airflow.local
