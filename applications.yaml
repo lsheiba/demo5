@@ -40,8 +40,8 @@
     - minikube
     configuration:
       values:
-        app: 21-zappos-set
-        model: serving-standalone-2
+        app: 21-kuberlab-demo
+        model: zappos-set-serving-standalone-8
         port: 5000
     name: zappos-ui
     src: https://github.com/kuberlab-catalog/zappos-ui/
