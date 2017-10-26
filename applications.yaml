@@ -29,8 +29,8 @@
             cpu: 50m
             memory: 64Mi
         serviceType: ClusterIP
-        styles_mlapp: 21-styles-set
-        styles_model: serving-train-4
+        styles_mlapp: 21-kuberlab-demo
+        styles_model: styles-set-serving-train-12
     name: styles-transfer-ui
     src: https://github.com/kuberlab-catalog/styles-transfer-ui/
     version: 1.0.0
