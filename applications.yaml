@@ -27,6 +27,11 @@
           Image:
             Name: kuberlab/mlboard
             Tag: v3
+          cron:
+            enabled: true
+          fetching:
+            pattern: '0 * * * *'
+            prometheusInterval: '60m'
           nodeSelector:
             enabled: false
             labels:
