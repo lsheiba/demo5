@@ -17,6 +17,31 @@
     name: grafana-prometheus
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
     version: ^1.0.0
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        global:
+          useRBAC: true
+        mlboard:
+          Image:
+            Name: kuberlab/mlboard
+            Tag: v3
+          nodeSelector:
+            enabled: false
+            labels:
+              mlboard: mlboard
+          persistence:
+            accessMode: ReadWriteOnce
+            fromProvider: true
+            size: 10Gi
+            storageClass: glusterfs
+            volume:
+              hostPath:
+                path: /var/lib/mlboard-postgresql/data
+    name: mlboard
+    src: https://github.com/kuberlab-catalog/ml-board/
+    version: 3.0.1
   name: kuberlab
 - charts:
   - clusters:
