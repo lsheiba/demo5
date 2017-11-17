@@ -16,7 +16,7 @@
           enabled: true
     name: grafana-prometheus
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
-    version: ^1.0.0
+    version: latest
   - clusters:
     - minikube
     configuration:
