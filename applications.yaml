@@ -49,7 +49,7 @@
                 path: /var/lib/mlboard-postgresql/data
     name: mlboard
     src: https://github.com/kuberlab-catalog/ml-board/
-    version: latest
+    version: master
   name: kuberlab
 - charts:
   - clusters:
