@@ -36,6 +36,9 @@
             enabled: false
             labels:
               mlboard: mlboard
+            pvcCreation:
+              className: ""
+              volumeName: ""
           persistence:
             accessMode: ReadWriteOnce
             fromProvider: true
