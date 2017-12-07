@@ -7,7 +7,7 @@
         exportGPU: true
         persistence:
           accessMode: ReadWriteOnce
-          enabled: true
+          enabled: false
           size:
             grafana: 10Gi
             prometheus: 10Gi
@@ -33,7 +33,7 @@
             pattern: '0 * * * *'
             prometheusInterval: '60m'
           nodeSelector:
-            enabled: false
+            enabled: true
             labels:
               mlboard: mlboard
             pvcCreation:
@@ -41,7 +41,7 @@
               volumeName: ""
           persistence:
             accessMode: ReadWriteOnce
-            fromProvider: true
+            fromProvider: false
             size: 10Gi
             storageClass: glusterfs
             volume:
