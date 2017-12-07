@@ -37,7 +37,7 @@
             labels:
               mlboard: mlboard
             pvcCreation:
-              className: ""
+              className: "portworx"
               volumeName: ""
           persistence:
             accessMode: ReadWriteOnce
