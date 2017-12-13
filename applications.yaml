@@ -81,7 +81,8 @@
     version: 1.0.0
   name: zappos-ui
 - charts:
-  - clusters: null
+  - clusters:
+    - minikube
     configuration:
       values:
         server:
