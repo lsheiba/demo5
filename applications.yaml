@@ -7,11 +7,11 @@
         exportGPU: true
         persistence:
           accessMode: ReadWriteOnce
-          enabled: false
+          enabled: true
           size:
             grafana: 10Gi
             prometheus: 10Gi
-          storageClass: glusterfs
+          storageClass: portworx
         pushGateway:
           enabled: true
     name: grafana-prometheus
