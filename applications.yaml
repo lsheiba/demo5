@@ -33,7 +33,7 @@
             pattern: 0 * * * *
             prometheusInterval: 60m
           nodeSelector:
-            enabled: true
+            enabled: false
             labels:
               mlboard: mlboard
             pvcCreation:
@@ -41,9 +41,9 @@
               volumeName: ""
           persistence:
             accessMode: ReadWriteOnce
-            fromProvider: false
+            fromProvider: true
             size: 10Gi
-            storageClass: glusterfs
+            storageClass: portworx
             volume:
               hostPath:
                 path: /var/lib/mlboard-postgresql/data
