@@ -39,14 +39,24 @@
             pvcCreation:
               className: portworx
               volumeName: ""
-          persistence:
-            accessMode: ReadWriteOnce
-            fromProvider: true
-            size: 10Gi
-            storageClass: portworx
-            volume:
-              hostPath:
-                path: /var/lib/mlboard-postgresql/data
+          postgres:
+            persistence:
+              accessMode: ReadWriteOnce
+              fromProvider: true
+              size: 10Gi
+              storageClass: portworx
+              volume:
+                hostPath:
+                  path: /var/lib/mlboard-postgresql/data
+          git:
+            persistence:
+              accessMode: ReadWriteOnce
+              fromProvider: true
+              size: 10Gi
+              storageClass: portworx
+              volume:
+                hostPath:
+                  path: /var/lib/mlboard-git/data       
     name: mlboard
     src: https://github.com/kuberlab-catalog/ml-board/
     version: ^3.0.0
