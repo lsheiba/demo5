@@ -32,6 +32,15 @@
           fetching:
             pattern: 0 * * * *
             prometheusInterval: 60m
+          git:
+            persistence:
+              accessMode: ReadWriteOnce
+              fromProvider: true
+              size: 10Gi
+              storageClass: portworx
+              volume:
+                hostPath:
+                  path: /var/lib/mlboard-git/data
           nodeSelector:
             enabled: false
             labels:
@@ -48,18 +57,41 @@
               volume:
                 hostPath:
                   path: /var/lib/mlboard-postgresql/data
-          git:
-            persistence:
-              accessMode: ReadWriteOnce
-              fromProvider: true
-              size: 10Gi
-              storageClass: portworx
-              volume:
-                hostPath:
-                  path: /var/lib/mlboard-git/data       
     name: mlboard
     src: https://github.com/kuberlab-catalog/ml-board/
     version: ^3.0.0
+  - clusters:
+    - minikube
+    configuration:
+      values:
+        global:
+          useRBAC: true
+        pluk:
+          Image:
+            Name: kuberlab/pluk
+            Tag: latest
+          auth:
+            enabled: false
+            internalKey: Ps3k8#2n5
+            url: http://cloud-dealer:8082/api/v0.2/auth/whoami
+          nodeSelector:
+            enabled: false
+            labels:
+              pluk: pluk
+          persistence:
+            dataSize: 100Gi
+            dataVolume:
+              hostPath:
+                path: /var/lib/pluk/data
+            fromProvider: true
+            gitSize: 10Gi
+            gitVolume:
+              hostPath:
+                path: /var/lib/pluk/git
+            storageClass: portworx-random
+    name: pluk
+    src: https://github.com/kuberlab-catalog/pluk/
+    version: 1.0.0
   name: kuberlab
 - charts:
   - clusters:
