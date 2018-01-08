@@ -70,7 +70,7 @@
           Image:
             Name: kuberlab/pluk
             Tag: latest
-          masters: "https://dev.kuberlab.io/v1"
+          masters: "https://dev.kuberlab.io/pluk/v1"
           auth:
             enabled: false
             internalKey: Ps3k8#2n5
