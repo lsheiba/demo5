@@ -3,17 +3,24 @@
     - minikube
     configuration:
       values:
-        RBAC: true
+        grafana:
+          persistence:
+            enabled: true
+            storageClass: portworx
+            accessMode: ReadWriteOnce
+            size: 1Gi
+
+        prometheus:
+          persistence:
+            enabled: false
+            storageClass: anything
+            accessMode: ReadWriteOnce
+            size: 10Gi
+
         exportGPU: true
-        persistence:
-          accessMode: ReadWriteOnce
-          enabled: true
-          size:
-            grafana: 10Gi
-            prometheus: 10Gi
-          storageClass: portworx
         pushGateway:
           enabled: true
+        RBAC: true
     name: grafana-prometheus
     src: https://github.com/kuberlab-catalog/grafana-prometheus/
     version: ^1.0.0
