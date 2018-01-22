@@ -8,7 +8,7 @@
             enabled: true
             storageClass: portworx
             accessMode: ReadWriteOnce
-            size: 1Gi
+            size: 10Gi
 
         prometheus:
           persistence:
