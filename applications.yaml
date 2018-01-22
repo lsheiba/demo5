@@ -6,7 +6,7 @@
         grafana:
           persistence:
             enabled: true
-            storageClass: portworx
+            storageClass: 
             accessMode: ReadWriteOnce
             size: 10Gi
 
