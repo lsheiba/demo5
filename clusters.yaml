@@ -1,5 +1,1 @@
-- Account: gpuhome
-  AutoDeploy: false
-  Name: minikube
-  Provider: kubernetes
-  Src: minikube.yaml
+[]
